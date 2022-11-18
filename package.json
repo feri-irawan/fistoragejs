@@ -24,5 +24,8 @@
   "bugs": {
     "url": "https://github.com/feri-irawan/fistoragejs/issues"
   },
-  "homepage": "https://github.com/feri-irawan/fistoragejs#readme"
+  "homepage": "https://github.com/feri-irawan/fistoragejs#readme",
+  "dependencies": {
+    "axios": "^1.1.3"
+  }
 }
