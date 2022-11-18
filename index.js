@@ -61,6 +61,19 @@ class Fistorage {
       data: updates,
     }).then(({ data }) => data);
   }
+
+  /**
+   * Delete Storage Contents
+   * @param {string} id - Storage id
+   * @returns {boolean}
+   */
+  async deleteContents(id) {
+    return await axios({
+      method: "DELETE",
+      url: this.url + "/storages/delete/" + id,
+      headers: { Authorization: `token ${this.key}` },
+    }).then(({ data }) => data);
+  }
 }
 
 module.exports = Fistorage;
