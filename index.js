@@ -46,6 +46,21 @@ class Fistorage {
       headers: { Authorization: `token ${this.key}` },
     }).then(({ data }) => data);
   }
+
+  /**
+   * Update Storage Contents
+   * @param {string} id - Storage id
+   * @param {{title: string|null, description: string|null, contents: any}} updates - Which will be updated
+   * @returns {object} - The new contents
+   */
+  async updateContents(id, updates) {
+    return await axios({
+      method: "PUT",
+      url: this.url + "/storages/update/" + id,
+      headers: { Authorization: `token ${this.key}` },
+      data: updates,
+    }).then(({ data }) => data);
+  }
 }
 
 module.exports = Fistorage;
