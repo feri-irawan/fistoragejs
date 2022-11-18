@@ -17,6 +17,22 @@ class Fistorage {
       .post(this.url + "/users/login", { username, password })
       .then(({ data }) => data);
   }
+
+  /**
+   * Create Storage
+   */
+  async createStorage({ title, description = "", contents = "" }) {
+    return await axios({
+      method: "POST",
+      url: this.url + "/storages/create",
+      headers: { Authorization: `token ${this.key}` },
+      data: {
+        title,
+        description,
+        contents,
+      },
+    }).then(({ data }) => data);
+  }
 }
 
 module.exports = Fistorage;
