@@ -33,6 +33,19 @@ class Fistorage {
       },
     }).then(({ data }) => data);
   }
+
+  /**
+   * Get Storage Contents
+   * @param {string} id - Storage id
+   * @returns {object} - Contents
+   */
+  async getContents(id) {
+    return await axios({
+      method: "GET",
+      url: this.url + "/storages/contents/" + id,
+      headers: { Authorization: `token ${this.key}` },
+    }).then(({ data }) => data);
+  }
 }
 
 module.exports = Fistorage;
