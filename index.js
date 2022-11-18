@@ -1,9 +1,9 @@
 const axios = require("axios");
 
 class Fistorage {
-  constructor(key) {
+  constructor(token) {
     this.url = "https://fistorage.glitch.me";
-    this.key = key;
+    this.token = token;
   }
 
   /**
@@ -25,7 +25,7 @@ class Fistorage {
     return await axios({
       method: "POST",
       url: this.url + "/storages/create",
-      headers: { Authorization: `token ${this.key}` },
+      headers: { Authorization: `token ${this.token}` },
       data: {
         title,
         description,
@@ -43,7 +43,7 @@ class Fistorage {
     return await axios({
       method: "GET",
       url: this.url + "/storages/contents/" + id,
-      headers: { Authorization: `token ${this.key}` },
+      headers: { Authorization: `token ${this.token}` },
     }).then(({ data }) => data);
   }
 
@@ -57,7 +57,7 @@ class Fistorage {
     return await axios({
       method: "PUT",
       url: this.url + "/storages/update/" + id,
-      headers: { Authorization: `token ${this.key}` },
+      headers: { Authorization: `token ${this.token}` },
       data: updates,
     }).then(({ data }) => data);
   }
@@ -71,7 +71,7 @@ class Fistorage {
     return await axios({
       method: "DELETE",
       url: this.url + "/storages/delete/" + id,
-      headers: { Authorization: `token ${this.key}` },
+      headers: { Authorization: `token ${this.token}` },
     }).then(({ data }) => data);
   }
 }
