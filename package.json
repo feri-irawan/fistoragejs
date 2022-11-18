@@ -1,0 +1,28 @@
+{
+  "name": "fistoragejs",
+  "version": "1.0.0",
+  "description": "Javascript fistorage client for connect to fistorage server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/feri-irawan/fistoragejs.git"
+  },
+  "keywords": [
+    "fistorage",
+    "json",
+    "javascript",
+    "database",
+    "db",
+    "js",
+    "storage"
+  ],
+  "author": "feri-irawan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/feri-irawan/fistoragejs/issues"
+  },
+  "homepage": "https://github.com/feri-irawan/fistoragejs#readme"
+}
